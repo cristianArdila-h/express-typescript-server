@@ -1,6 +1,7 @@
 import  app  from "./app";
 import http from 'http';
 import { getVariable } from './config';
+import dbConnection, { DbConnection } from "./modules/core/database/config";
 
 let server: http.Server | undefined;
 let port: string | number | false;
@@ -22,6 +23,10 @@ let port: string | number | false;
         server.listen(port);
         //server.on('error', onError);
         //server.on('listening', onListening);
+        /**
+         * Connection mongo Db
+         */
+        dbConnection.upConect();
     } catch (error) {
         //debug('[ERROR] Could not start application: ', error);
         console.log('[ERROR] Could not start application: ', error);
