@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../static'))); // para el OAS
 app.use(cors({}));
 
-app.use('/', indexRouter);
+app.use('/api/', indexRouter);
 //app.use(fullAPiPath, balancesRouter);
 
 app.use((err: any, req: any, res: any, next: any) => {

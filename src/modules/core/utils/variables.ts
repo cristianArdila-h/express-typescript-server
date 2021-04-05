@@ -1,0 +1,1 @@
+export const MONGODB_CNN = `mongodb+srv://cristian_pruebas_mongodb:ISqVBZejCpu1sg3B@test-mongo.biyji.mongodb.net/prueba_mongo`;
